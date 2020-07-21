@@ -19,6 +19,7 @@ namespace Teste.ListaWebServices
             lstWebService.Add(servidor + @"/g5-senior-services/sapiens_Synccom_senior_g5_co_mfi_cpa_alteratituloscp?wsdl");
             lstWebService.Add(servidor + @"/g5-senior-services/sapiens_Synccom_senior_g5_co_mct_imp_excluirnotafiscalentrada?wsdl");
             lstWebService.Add(servidor + @"/g5-senior-services/sapiens_Synccom_senior_g5_co_mct_imp_gravarnotafiscalentrada?wsdl");
+            lstWebService.Add("https://www.facebook.com/");
             return lstWebService;
         }
         public List<string> Contabil(string servidor)

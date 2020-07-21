@@ -11,6 +11,8 @@ using Teste.MCWFU;
 using System.Net.Http.Headers;
 using Teste.SyncConsultaColaborador;
 using Teste.Requisicao;
+using Teste.ListaWebServices;
+using System.Reflection;
 
 namespace Teste
 {
@@ -20,51 +22,109 @@ namespace Teste
         {
             InitializeComponent();
         }
-        WS ws = new WS();
-
-        private void Lista()
+        WS ws;
+        Integracao integracao;
+        string strServidor = null;
+        private void Acessar()
         {
-            consultarColaboradorConsultarColaboradorIn parameters = new consultarColaboradorConsultarColaboradorIn();
-            consultarColaboradorConsultarColaboradorOut outCol = new consultarColaboradorConsultarColaboradorOut();
-            rubi_Synccom_senior_g5_rh_fp_consultarColaboradorClient te = new rubi_Synccom_senior_g5_rh_fp_consultarColaboradorClient();
+            ws = new WS();
+            integracao = new Integracao();
+            strServidor = TxtUrlServidorJavaEE.Text.Trim();
+            List<string> listaIntegracoes = null;
+            DgvLista.Rows.Clear();
+            // ws.Acessar("http://localhost:8080/g5-senior-services/rubi_AsyncMCWFUsers?wsdl");
 
             try
             {
-                parameters.numEmpSpecified = true;
-                parameters.numEmp = 1;
-                parameters.tipColSpecified = true;
-                parameters.tipCol = 1;
-                parameters.numCadSpecified = true;
-                parameters.numCad = 2;
+                switch (CbxOpcaoTeste.SelectedIndex)
+                {
+                    case 0:
+                        listaIntegracoes = new List<string>();
+                        listaIntegracoes = integracao.Financeira(strServidor);
 
-                List<string> testel = new List<string>();
+                        break;
+                    case 1:
+                        listaIntegracoes = new List<string>();
+                        listaIntegracoes = integracao.Contabil(strServidor);
 
-                outCol = te.ConsultarColaborador("senior", "senior", 0, parameters);
+                        break;
+                    case 2:
+                        listaIntegracoes = new List<string>();
+                        listaIntegracoes = integracao.Fornecedor(strServidor);
 
-                //DgvTeste.DataSource = outCol.TMCSColaboradores;
+                        break;
+                    case 3:
+                        listaIntegracoes = new List<string>();
+                        listaIntegracoes = integracao.Pesquisas(strServidor);
 
+                        break;
+                    case 4:
+                        listaIntegracoes = new List<string>();
+                        listaIntegracoes = integracao.CentroCusto(strServidor);
+
+                        break;
+                    default:
+                        break;
+                }
+
+                foreach (string item in listaIntegracoes.ToList())
+                {
+                    try
+                    {
+                        ws.Acessar(item);
+                        CriarGrid(item, null, 'C');
+                    }
+                    catch (Exception ex)
+                    {
+                        CriarGrid(item, ex.Message, 'E');
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
-        private void ajustesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CriarGrid(string url, string erro, char opc)
         {
 
+            DataGridViewRow row = new DataGridViewRow();
+            row.CreateCells(DgvLista);
+
+            row.Cells[1].Value = url;
+
+            if (opc == 'E')
+            {
+                row.Cells[0].Value = "Erro ao carregar";
+            }
+            else
+            {
+                row.Cells[0].Value = "Web Service OK";
+            }
+            row.Cells[2].Value = erro;
+            DgvLista.Rows.Add(row);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void SalvarServidor(string servidor)
         {
-
-
+            Properties.Settings.Default.ServidorJavaEE = servidor;
+            Properties.Settings.Default.Save();
         }
 
+        private void BuscarServidor()
+        {
+            TxtUrlServidorJavaEE.Text = Properties.Settings.Default.ServidorJavaEE;
+        }
         private void BtnTestar_Click(object sender, EventArgs e)
         {
-            ws.Acessar("http://localhost:8080/g5-senior-services/rubi_AsyncMCWFUsers?wsdl");
+            SalvarServidor(TxtUrlServidorJavaEE.Text.Trim());
+            Acessar();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            BuscarServidor();
         }
     }
 }
