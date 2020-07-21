@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Teste.MCWFU {
+namespace TesteWebService.MCWFU {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -18,69 +18,69 @@ namespace Teste.MCWFU {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/DiscoverUsersGroupsRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/DiscoverUsersGroupsResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        string DiscoverUsersGroups(string user, string password, int encryption, Teste.MCWFU.mcwfUsersDiscoverUsersGroupsIn parameters);
+        string DiscoverUsersGroups(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersDiscoverUsersGroupsIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/DiscoverUsersGroupsRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/DiscoverUsersGroupsResponse")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        System.Threading.Tasks.Task<string> DiscoverUsersGroupsAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersDiscoverUsersGroupsIn parameters);
+        System.Threading.Tasks.Task<string> DiscoverUsersGroupsAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersDiscoverUsersGroupsIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/PersonExistsRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/PersonExistsResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        string PersonExists(string user, string password, int encryption, Teste.MCWFU.mcwfUsersPersonExistsIn parameters);
+        string PersonExists(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersPersonExistsIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/PersonExistsRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/PersonExistsResponse")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        System.Threading.Tasks.Task<string> PersonExistsAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersPersonExistsIn parameters);
+        System.Threading.Tasks.Task<string> PersonExistsAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersPersonExistsIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/GetUserGroupsRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/GetUserGroupsResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        string GetUserGroups(string user, string password, int encryption, Teste.MCWFU.mcwfUsersGetUserGroupsIn parameters);
+        string GetUserGroups(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersGetUserGroupsIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/GetUserGroupsRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/GetUserGroupsResponse")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        System.Threading.Tasks.Task<string> GetUserGroupsAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersGetUserGroupsIn parameters);
+        System.Threading.Tasks.Task<string> GetUserGroupsAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersGetUserGroupsIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/GetPersonKindRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/GetPersonKindResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        string GetPersonKind(string user, string password, int encryption, Teste.MCWFU.mcwfUsersGetPersonKindIn parameters);
+        string GetPersonKind(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersGetPersonKindIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/GetPersonKindRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/GetPersonKindResponse")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        System.Threading.Tasks.Task<string> GetPersonKindAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersGetPersonKindIn parameters);
+        System.Threading.Tasks.Task<string> GetPersonKindAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersGetPersonKindIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/UserReplicationRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/UserReplicationResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        string UserReplication(string user, string password, int encryption, Teste.MCWFU.mcwfUsersUserReplicationIn parameters);
+        string UserReplication(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersUserReplicationIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/UserReplicationRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/UserReplicationResponse")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        System.Threading.Tasks.Task<string> UserReplicationAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersUserReplicationIn parameters);
+        System.Threading.Tasks.Task<string> UserReplicationAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersUserReplicationIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/ChangePasswordRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/ChangePasswordResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        string ChangePassword(string user, string password, int encryption, Teste.MCWFU.mcwfUsersChangePasswordIn parameters);
+        string ChangePassword(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersChangePasswordIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/ChangePasswordRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/ChangePasswordResponse")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        System.Threading.Tasks.Task<string> ChangePasswordAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersChangePasswordIn parameters);
+        System.Threading.Tasks.Task<string> ChangePasswordAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersChangePasswordIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/AuthenticateJAASRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/AuthenticateJAASResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        string AuthenticateJAAS(string user, string password, int encryption, Teste.MCWFU.mcwfUsersAuthenticateJAASIn parameters);
+        string AuthenticateJAAS(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersAuthenticateJAASIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_AsyncMCWFUsers/AuthenticateJAASRequest", ReplyAction="http://services.senior.com.br/rubi_AsyncMCWFUsers/AuthenticateJAASResponse")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        System.Threading.Tasks.Task<string> AuthenticateJAASAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersAuthenticateJAASIn parameters);
+        System.Threading.Tasks.Task<string> AuthenticateJAASAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersAuthenticateJAASIn parameters);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -126,7 +126,7 @@ namespace Teste.MCWFU {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -228,7 +228,7 @@ namespace Teste.MCWFU {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -330,7 +330,7 @@ namespace Teste.MCWFU {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -390,7 +390,7 @@ namespace Teste.MCWFU {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -450,7 +450,7 @@ namespace Teste.MCWFU {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -510,7 +510,7 @@ namespace Teste.MCWFU {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -584,12 +584,12 @@ namespace Teste.MCWFU {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface rubi_AsyncMCWFUsersChannel : Teste.MCWFU.rubi_AsyncMCWFUsers, System.ServiceModel.IClientChannel {
+    public interface rubi_AsyncMCWFUsersChannel : TesteWebService.MCWFU.rubi_AsyncMCWFUsers, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class rubi_AsyncMCWFUsersClient : System.ServiceModel.ClientBase<Teste.MCWFU.rubi_AsyncMCWFUsers>, Teste.MCWFU.rubi_AsyncMCWFUsers {
+    public partial class rubi_AsyncMCWFUsersClient : System.ServiceModel.ClientBase<TesteWebService.MCWFU.rubi_AsyncMCWFUsers>, TesteWebService.MCWFU.rubi_AsyncMCWFUsers {
         
         public rubi_AsyncMCWFUsersClient() {
         }
@@ -610,59 +610,59 @@ namespace Teste.MCWFU {
                 base(binding, remoteAddress) {
         }
         
-        public string DiscoverUsersGroups(string user, string password, int encryption, Teste.MCWFU.mcwfUsersDiscoverUsersGroupsIn parameters) {
+        public string DiscoverUsersGroups(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersDiscoverUsersGroupsIn parameters) {
             return base.Channel.DiscoverUsersGroups(user, password, encryption, parameters);
         }
         
-        public System.Threading.Tasks.Task<string> DiscoverUsersGroupsAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersDiscoverUsersGroupsIn parameters) {
+        public System.Threading.Tasks.Task<string> DiscoverUsersGroupsAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersDiscoverUsersGroupsIn parameters) {
             return base.Channel.DiscoverUsersGroupsAsync(user, password, encryption, parameters);
         }
         
-        public string PersonExists(string user, string password, int encryption, Teste.MCWFU.mcwfUsersPersonExistsIn parameters) {
+        public string PersonExists(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersPersonExistsIn parameters) {
             return base.Channel.PersonExists(user, password, encryption, parameters);
         }
         
-        public System.Threading.Tasks.Task<string> PersonExistsAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersPersonExistsIn parameters) {
+        public System.Threading.Tasks.Task<string> PersonExistsAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersPersonExistsIn parameters) {
             return base.Channel.PersonExistsAsync(user, password, encryption, parameters);
         }
         
-        public string GetUserGroups(string user, string password, int encryption, Teste.MCWFU.mcwfUsersGetUserGroupsIn parameters) {
+        public string GetUserGroups(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersGetUserGroupsIn parameters) {
             return base.Channel.GetUserGroups(user, password, encryption, parameters);
         }
         
-        public System.Threading.Tasks.Task<string> GetUserGroupsAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersGetUserGroupsIn parameters) {
+        public System.Threading.Tasks.Task<string> GetUserGroupsAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersGetUserGroupsIn parameters) {
             return base.Channel.GetUserGroupsAsync(user, password, encryption, parameters);
         }
         
-        public string GetPersonKind(string user, string password, int encryption, Teste.MCWFU.mcwfUsersGetPersonKindIn parameters) {
+        public string GetPersonKind(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersGetPersonKindIn parameters) {
             return base.Channel.GetPersonKind(user, password, encryption, parameters);
         }
         
-        public System.Threading.Tasks.Task<string> GetPersonKindAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersGetPersonKindIn parameters) {
+        public System.Threading.Tasks.Task<string> GetPersonKindAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersGetPersonKindIn parameters) {
             return base.Channel.GetPersonKindAsync(user, password, encryption, parameters);
         }
         
-        public string UserReplication(string user, string password, int encryption, Teste.MCWFU.mcwfUsersUserReplicationIn parameters) {
+        public string UserReplication(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersUserReplicationIn parameters) {
             return base.Channel.UserReplication(user, password, encryption, parameters);
         }
         
-        public System.Threading.Tasks.Task<string> UserReplicationAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersUserReplicationIn parameters) {
+        public System.Threading.Tasks.Task<string> UserReplicationAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersUserReplicationIn parameters) {
             return base.Channel.UserReplicationAsync(user, password, encryption, parameters);
         }
         
-        public string ChangePassword(string user, string password, int encryption, Teste.MCWFU.mcwfUsersChangePasswordIn parameters) {
+        public string ChangePassword(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersChangePasswordIn parameters) {
             return base.Channel.ChangePassword(user, password, encryption, parameters);
         }
         
-        public System.Threading.Tasks.Task<string> ChangePasswordAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersChangePasswordIn parameters) {
+        public System.Threading.Tasks.Task<string> ChangePasswordAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersChangePasswordIn parameters) {
             return base.Channel.ChangePasswordAsync(user, password, encryption, parameters);
         }
         
-        public string AuthenticateJAAS(string user, string password, int encryption, Teste.MCWFU.mcwfUsersAuthenticateJAASIn parameters) {
+        public string AuthenticateJAAS(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersAuthenticateJAASIn parameters) {
             return base.Channel.AuthenticateJAAS(user, password, encryption, parameters);
         }
         
-        public System.Threading.Tasks.Task<string> AuthenticateJAASAsync(string user, string password, int encryption, Teste.MCWFU.mcwfUsersAuthenticateJAASIn parameters) {
+        public System.Threading.Tasks.Task<string> AuthenticateJAASAsync(string user, string password, int encryption, TesteWebService.MCWFU.mcwfUsersAuthenticateJAASIn parameters) {
             return base.Channel.AuthenticateJAASAsync(user, password, encryption, parameters);
         }
     }

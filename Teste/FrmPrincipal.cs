@@ -1,20 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Teste.MCWFU;
-using System.Net.Http.Headers;
-using Teste.SyncConsultaColaborador;
-using Teste.Requisicao;
-using Teste.ListaWebServices;
-using System.Reflection;
+using TesteWebService.ListaWebServices;
+using TesteWebService.Requisicao;
 
-namespace Teste
+namespace TesteWebService
 {
     public partial class FrmPrincipal : Form
     {

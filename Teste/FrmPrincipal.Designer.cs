@@ -1,4 +1,4 @@
-﻿namespace Teste
+﻿namespace TesteWebService
 {
     partial class FrmPrincipal
     {

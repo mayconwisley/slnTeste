@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Teste.SyncConsultaColaborador {
+namespace TesteWebService.SyncConsultaColaborador {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -20,17 +20,17 @@ namespace Teste.SyncConsultaColaborador {
             "onsultarColaboradorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        Teste.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorOut ConsultarColaborador(string user, string password, int encryption, Teste.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorIn parameters);
+        TesteWebService.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorOut ConsultarColaborador(string user, string password, int encryption, TesteWebService.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorIn parameters);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.senior.com.br/rubi_Synccom_senior_g5_rh_fp_consultarColaborador/C" +
             "onsultarColaboradorRequest", ReplyAction="http://services.senior.com.br/rubi_Synccom_senior_g5_rh_fp_consultarColaborador/C" +
             "onsultarColaboradorResponse")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="result")]
-        System.Threading.Tasks.Task<Teste.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorOut> ConsultarColaboradorAsync(string user, string password, int encryption, Teste.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorIn parameters);
+        System.Threading.Tasks.Task<TesteWebService.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorOut> ConsultarColaboradorAsync(string user, string password, int encryption, TesteWebService.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorIn parameters);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -160,7 +160,7 @@ namespace Teste.SyncConsultaColaborador {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1004,7 +1004,7 @@ namespace Teste.SyncConsultaColaborador {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1050,12 +1050,12 @@ namespace Teste.SyncConsultaColaborador {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface rubi_Synccom_senior_g5_rh_fp_consultarColaboradorChannel : Teste.SyncConsultaColaborador.rubi_Synccom_senior_g5_rh_fp_consultarColaborador, System.ServiceModel.IClientChannel {
+    public interface rubi_Synccom_senior_g5_rh_fp_consultarColaboradorChannel : TesteWebService.SyncConsultaColaborador.rubi_Synccom_senior_g5_rh_fp_consultarColaborador, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class rubi_Synccom_senior_g5_rh_fp_consultarColaboradorClient : System.ServiceModel.ClientBase<Teste.SyncConsultaColaborador.rubi_Synccom_senior_g5_rh_fp_consultarColaborador>, Teste.SyncConsultaColaborador.rubi_Synccom_senior_g5_rh_fp_consultarColaborador {
+    public partial class rubi_Synccom_senior_g5_rh_fp_consultarColaboradorClient : System.ServiceModel.ClientBase<TesteWebService.SyncConsultaColaborador.rubi_Synccom_senior_g5_rh_fp_consultarColaborador>, TesteWebService.SyncConsultaColaborador.rubi_Synccom_senior_g5_rh_fp_consultarColaborador {
         
         public rubi_Synccom_senior_g5_rh_fp_consultarColaboradorClient() {
         }
@@ -1076,11 +1076,11 @@ namespace Teste.SyncConsultaColaborador {
                 base(binding, remoteAddress) {
         }
         
-        public Teste.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorOut ConsultarColaborador(string user, string password, int encryption, Teste.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorIn parameters) {
+        public TesteWebService.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorOut ConsultarColaborador(string user, string password, int encryption, TesteWebService.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorIn parameters) {
             return base.Channel.ConsultarColaborador(user, password, encryption, parameters);
         }
         
-        public System.Threading.Tasks.Task<Teste.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorOut> ConsultarColaboradorAsync(string user, string password, int encryption, Teste.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorIn parameters) {
+        public System.Threading.Tasks.Task<TesteWebService.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorOut> ConsultarColaboradorAsync(string user, string password, int encryption, TesteWebService.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorIn parameters) {
             return base.Channel.ConsultarColaboradorAsync(user, password, encryption, parameters);
         }
     }

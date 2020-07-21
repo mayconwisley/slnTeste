@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="consultarColaboradorConsultarColaboradorOut" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>Teste.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorOut, Connected Services.SyncConsultaColaborador.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>TesteWebService.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorOut, Connected Services.SyncConsultaColaborador.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>
