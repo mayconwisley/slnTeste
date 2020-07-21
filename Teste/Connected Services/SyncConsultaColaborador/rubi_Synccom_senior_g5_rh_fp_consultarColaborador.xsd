@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.senior.com.br" targetNamespace="http://services.senior.com.br" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="consultarColaboradorConsultarColaboradorIn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="flowInstanceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="flowName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numCad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="numEmp" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="tipCol" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultarColaboradorConsultarColaboradorOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="erroExecucao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TMCSColaboradores" nillable="true" type="tns:consultarColaboradorConsultarColaboradorOutTMCSColaboradores" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultarColaboradorConsultarColaboradorOutTMCSColaboradores">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="catCnh" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codCar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codCb2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codCcu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codFil" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="codFor" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="codLoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="datAdm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="datAfa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="datNas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dddTel" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ddiTel" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="demPsp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desSit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dexCid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dscTipCol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dvaPsp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emaCom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emiCid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emiPsp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estCar" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="estCid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="estCnh" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="horAfa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nomCcu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nomEmp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nomFun" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nomLoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nomMae" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nomPai" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numCad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="numCgc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numCid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numCnh" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numCpf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numEmp" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="numPsp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numTel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="orgCnh" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="razSoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sitAfa" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="tabOrg" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="tipCol" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="tipIns" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="tipSex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="titCar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="titRed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="venCnh" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
