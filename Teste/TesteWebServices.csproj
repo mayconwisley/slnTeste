@@ -51,16 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\MCWFU\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\SyncConsultaColaborador\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,17 +74,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Connected Services\MCWFU\g5-senior-services.wsdl" />
-    <None Include="Connected Services\MCWFU\rubi_AsyncMCWFUsers.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SyncConsultaColaborador\g5-senior-services.wsdl" />
-    <None Include="Connected Services\SyncConsultaColaborador\rubi_Synccom_senior_g5_rh_fp_consultarColaborador.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\SyncConsultaColaborador\TesteWebService.SyncConsultaColaborador.consultarColaboradorConsultarColaboradorOut.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,37 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\MCWFU\" />
-    <WCFMetadataStorage Include="Connected Services\SyncConsultaColaborador\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\MCWFU\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\MCWFU\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\MCWFU\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SyncConsultaColaborador\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SyncConsultaColaborador\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SyncConsultaColaborador\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="img_543556.ico" />

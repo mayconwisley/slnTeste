@@ -112,6 +112,7 @@
             // 
             this.DgvLista.AllowUserToAddRows = false;
             this.DgvLista.AllowUserToDeleteRows = false;
+            this.DgvLista.AllowUserToOrderColumns = true;
             this.DgvLista.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DgvLista.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -121,7 +122,6 @@
             this.Erro});
             this.DgvLista.Location = new System.Drawing.Point(13, 153);
             this.DgvLista.Name = "DgvLista";
-            this.DgvLista.ReadOnly = true;
             this.DgvLista.Size = new System.Drawing.Size(684, 244);
             this.DgvLista.TabIndex = 6;
             // 
@@ -130,7 +130,6 @@
             this.Check.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Check.HeaderText = "Check";
             this.Check.Name = "Check";
-            this.Check.ReadOnly = true;
             this.Check.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Check.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Check.Width = 44;
@@ -140,14 +139,12 @@
             this.URL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.URL.HeaderText = "URL";
             this.URL.Name = "URL";
-            this.URL.ReadOnly = true;
             this.URL.Width = 54;
             // 
             // Erro
             // 
             this.Erro.HeaderText = "Erro";
             this.Erro.Name = "Erro";
-            this.Erro.ReadOnly = true;
             // 
             // label3
             // 
