@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using TesteWebService.ListaWebServices;
@@ -67,15 +68,19 @@ namespace TesteWebService
 
                     foreach (string item in listaIntegracoes.ToList())
                     {
+                        int i = 0;
                         try
                         {
                             ws.Acessar(item);
-                            CriarGrid(item, null, 'C');
+                            CriarGrid(item, null, 'C', i);
+
                         }
                         catch (Exception ex)
                         {
-                            CriarGrid(item, ex.Message, 'E');
+                            CriarGrid(item, ex.Message, 'E', i);
+
                         }
+                        i++;
                     }
                 }));
 
@@ -87,7 +92,7 @@ namespace TesteWebService
             }
         }
 
-        private void CriarGrid(string url, string erro, char opc)
+        private void CriarGrid(string url, string erro, char opc, int i)
         {
 
             DataGridViewRow row = new DataGridViewRow();
@@ -98,13 +103,16 @@ namespace TesteWebService
             if (opc == 'E')
             {
                 row.Cells[0].Value = "Erro ao carregar";
+                row.DefaultCellStyle.BackColor = Color.Red;
             }
             else
             {
                 row.Cells[0].Value = "Web Service OK";
+                row.DefaultCellStyle.BackColor = Color.Green;
             }
             row.Cells[2].Value = erro;
             DgvLista.Rows.Add(row);
+            //DgvLista.Rows[i].DefaultCellStyle.BackColor = Color.Green;
         }
 
         private void SalvarServidor(string servidor)
