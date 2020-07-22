@@ -36,10 +36,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnTestar = new System.Windows.Forms.Button();
             this.DgvLista = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
             this.Check = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.URL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Erro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.BwProcesso = new System.ComponentModel.BackgroundWorker();
+            this.LblTeste = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).BeginInit();
             this.SuspendLayout();
@@ -96,12 +98,14 @@
             // 
             // BtnTestar
             // 
+            this.BtnTestar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BtnTestar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnTestar.Location = new System.Drawing.Point(555, 14);
             this.BtnTestar.Name = "BtnTestar";
             this.BtnTestar.Size = new System.Drawing.Size(142, 42);
             this.BtnTestar.TabIndex = 5;
             this.BtnTestar.Text = "Testar";
-            this.BtnTestar.UseVisualStyleBackColor = true;
+            this.BtnTestar.UseVisualStyleBackColor = false;
             this.BtnTestar.Click += new System.EventHandler(this.BtnTestar_Click);
             // 
             // DgvLista
@@ -120,15 +124,6 @@
             this.DgvLista.ReadOnly = true;
             this.DgvLista.Size = new System.Drawing.Size(684, 244);
             this.DgvLista.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 137);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "URL Testadas";
             // 
             // Check
             // 
@@ -154,11 +149,36 @@
             this.Erro.Name = "Erro";
             this.Erro.ReadOnly = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 137);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "URL Testadas";
+            // 
+            // BwProcesso
+            // 
+            this.BwProcesso.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BwProcesso_DoWork);
+            this.BwProcesso.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BwProcesso_RunWorkerCompleted);
+            // 
+            // LblTeste
+            // 
+            this.LblTeste.AutoSize = true;
+            this.LblTeste.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTeste.Location = new System.Drawing.Point(338, 89);
+            this.LblTeste.Name = "LblTeste";
+            this.LblTeste.Size = new System.Drawing.Size(31, 29);
+            this.LblTeste.TabIndex = 9;
+            this.LblTeste.Text = "...";
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 406);
+            this.Controls.Add(this.LblTeste);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.DgvLista);
             this.Controls.Add(this.BtnTestar);
@@ -194,6 +214,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Check;
         private System.Windows.Forms.DataGridViewTextBoxColumn URL;
         private System.Windows.Forms.DataGridViewTextBoxColumn Erro;
+        private System.ComponentModel.BackgroundWorker BwProcesso;
+        private System.Windows.Forms.Label LblTeste;
     }
 }
 

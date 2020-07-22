@@ -22,54 +22,64 @@ namespace TesteWebService
             integracao = new Integracao();
             strServidor = TxtUrlServidorJavaEE.Text.Trim();
             List<string> listaIntegracoes = null;
-            DgvLista.Rows.Clear();
-            // ws.Acessar("http://localhost:8080/g5-senior-services/rubi_AsyncMCWFUsers?wsdl");
-
             try
             {
-                switch (CbxOpcaoTeste.SelectedIndex)
+
+                Invoke((Action)(() =>
                 {
-                    case 0:
-                        listaIntegracoes = new List<string>();
-                        listaIntegracoes = integracao.Financeira(strServidor);
+                    LblTeste.Text = "Testando URLs WebServices";
+                }));
 
-                        break;
-                    case 1:
-                        listaIntegracoes = new List<string>();
-                        listaIntegracoes = integracao.Contabil(strServidor);
 
-                        break;
-                    case 2:
-                        listaIntegracoes = new List<string>();
-                        listaIntegracoes = integracao.Fornecedor(strServidor);
-
-                        break;
-                    case 3:
-                        listaIntegracoes = new List<string>();
-                        listaIntegracoes = integracao.Pesquisas(strServidor);
-
-                        break;
-                    case 4:
-                        listaIntegracoes = new List<string>();
-                        listaIntegracoes = integracao.CentroCusto(strServidor);
-
-                        break;
-                    default:
-                        break;
-                }
-
-                foreach (string item in listaIntegracoes.ToList())
+                Invoke((Action)(() =>
                 {
-                    try
+                    DgvLista.Rows.Clear();
+                    switch (CbxOpcaoTeste.SelectedIndex)
                     {
-                        ws.Acessar(item);
-                        CriarGrid(item, null, 'C');
+                        case 0:
+                            listaIntegracoes = new List<string>();
+                            listaIntegracoes = integracao.Financeira(strServidor);
+
+                            break;
+                        case 1:
+                            listaIntegracoes = new List<string>();
+                            listaIntegracoes = integracao.Contabil(strServidor);
+
+                            break;
+                        case 2:
+                            listaIntegracoes = new List<string>();
+                            listaIntegracoes = integracao.Fornecedor(strServidor);
+
+                            break;
+                        case 3:
+                            listaIntegracoes = new List<string>();
+                            listaIntegracoes = integracao.Pesquisas(strServidor);
+
+                            break;
+                        case 4:
+                            listaIntegracoes = new List<string>();
+                            listaIntegracoes = integracao.CentroCusto(strServidor);
+
+                            break;
+                        default:
+                            break;
                     }
-                    catch (Exception ex)
+
+                    foreach (string item in listaIntegracoes.ToList())
                     {
-                        CriarGrid(item, ex.Message, 'E');
+                        try
+                        {
+                            ws.Acessar(item);
+                            CriarGrid(item, null, 'C');
+                        }
+                        catch (Exception ex)
+                        {
+                            CriarGrid(item, ex.Message, 'E');
+                        }
                     }
-                }
+                }));
+
+
             }
             catch (Exception ex)
             {
@@ -110,12 +120,22 @@ namespace TesteWebService
         private void BtnTestar_Click(object sender, EventArgs e)
         {
             SalvarServidor(TxtUrlServidorJavaEE.Text.Trim());
-            Acessar();
+            BwProcesso.RunWorkerAsync();
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             BuscarServidor();
+        }
+
+        private void BwProcesso_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            Acessar();
+        }
+
+        private void BwProcesso_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            LblTeste.Text = "Testes Concluidos!";
         }
     }
 }
