@@ -30,8 +30,6 @@ namespace TesteWebService
                 {
                     LblTeste.Text = "Testando URLs WebServices";
                 }));
-
-
                 Invoke((Action)(() =>
                 {
                     DgvLista.Rows.Clear();
@@ -73,18 +71,14 @@ namespace TesteWebService
                         {
                             ws.Acessar(item);
                             CriarGrid(item, null, 'C', i);
-
                         }
                         catch (Exception ex)
                         {
                             CriarGrid(item, ex.Message, 'E', i);
-
                         }
                         i++;
                     }
                 }));
-
-
             }
             catch (Exception ex)
             {
@@ -94,7 +88,6 @@ namespace TesteWebService
 
         private void CriarGrid(string url, string erro, char opc, int i)
         {
-
             DataGridViewRow row = new DataGridViewRow();
             row.CreateCells(DgvLista);
 
@@ -112,7 +105,6 @@ namespace TesteWebService
             }
             row.Cells[2].Value = erro;
             DgvLista.Rows.Add(row);
-            //DgvLista.Rows[i].DefaultCellStyle.BackColor = Color.Green;
         }
 
         private void SalvarServidor(string servidor)
