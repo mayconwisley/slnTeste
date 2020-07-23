@@ -17,68 +17,66 @@ namespace TesteWebService
         WS ws;
         Integracao integracao;
         string strServidor = null;
+
         private void Acessar()
         {
             ws = new WS();
             integracao = new Integracao();
+            int cbxSelectedIndex = 0;
             strServidor = TxtUrlServidorJavaEE.Text.Trim();
             List<string> listaIntegracoes = null;
             try
             {
-
                 Invoke((Action)(() =>
+                              {
+                                  LblTeste.Text = "Testando URLs WebServices";
+                                  DgvLista.Rows.Clear();
+                                  cbxSelectedIndex = CbxOpcaoTeste.SelectedIndex;
+                              }));
+
+                switch (cbxSelectedIndex)
                 {
-                    LblTeste.Text = "Testando URLs WebServices";
-                }));
-                Invoke((Action)(() =>
+                    case 0:
+                        listaIntegracoes = new List<string>();
+                        listaIntegracoes = integracao.Financeira(strServidor);
+
+                        break;
+                    case 1:
+                        listaIntegracoes = new List<string>();
+                        listaIntegracoes = integracao.Contabil(strServidor);
+
+                        break;
+                    case 2:
+                        listaIntegracoes = new List<string>();
+                        listaIntegracoes = integracao.Fornecedor(strServidor);
+
+                        break;
+                    case 3:
+                        listaIntegracoes = new List<string>();
+                        listaIntegracoes = integracao.Pesquisas(strServidor);
+
+                        break;
+                    case 4:
+                        listaIntegracoes = new List<string>();
+                        listaIntegracoes = integracao.CentroCusto(strServidor);
+
+                        break;
+                    default:
+                        break;
+                }
+
+                foreach (string item in listaIntegracoes.ToList())
                 {
-                    DgvLista.Rows.Clear();
-                    switch (CbxOpcaoTeste.SelectedIndex)
+                    try
                     {
-                        case 0:
-                            listaIntegracoes = new List<string>();
-                            listaIntegracoes = integracao.Financeira(strServidor);
-
-                            break;
-                        case 1:
-                            listaIntegracoes = new List<string>();
-                            listaIntegracoes = integracao.Contabil(strServidor);
-
-                            break;
-                        case 2:
-                            listaIntegracoes = new List<string>();
-                            listaIntegracoes = integracao.Fornecedor(strServidor);
-
-                            break;
-                        case 3:
-                            listaIntegracoes = new List<string>();
-                            listaIntegracoes = integracao.Pesquisas(strServidor);
-
-                            break;
-                        case 4:
-                            listaIntegracoes = new List<string>();
-                            listaIntegracoes = integracao.CentroCusto(strServidor);
-
-                            break;
-                        default:
-                            break;
+                        ws.Acessar(item);
+                        CriarGrid(item, null, 'C');
                     }
-
-                    foreach (string item in listaIntegracoes.ToList())
+                    catch (Exception ex)
                     {
-                        int i = 0;
-                        try
-                        {
-                            ws.Acessar(item);
-                            CriarGrid(item, null, 'C', i);
-                        }
-                        catch (Exception ex)
-                        {
-                            CriarGrid(item, ex.Message, 'E', i);
-                        }
-                        i++;
+                        CriarGrid(item, ex.Message, 'E');
                     }
-                }));
+                }
             }
             catch (Exception ex)
             {
@@ -86,25 +84,28 @@ namespace TesteWebService
             }
         }
 
-        private void CriarGrid(string url, string erro, char opc, int i)
+        private void CriarGrid(string url, string erro, char opc)
         {
-            DataGridViewRow row = new DataGridViewRow();
-            row.CreateCells(DgvLista);
-
-            row.Cells[1].Value = url;
-
-            if (opc == 'E')
+            Invoke((Action)(() =>
             {
-                row.Cells[0].Value = "Erro ao carregar";
-                row.DefaultCellStyle.BackColor = Color.Red;
-            }
-            else
-            {
-                row.Cells[0].Value = "Web Service OK";
-                row.DefaultCellStyle.BackColor = Color.Green;
-            }
-            row.Cells[2].Value = erro;
-            DgvLista.Rows.Add(row);
+                DataGridViewRow row = new DataGridViewRow();
+                row.CreateCells(DgvLista);
+
+                row.Cells[1].Value = url;
+
+                if (opc == 'E')
+                {
+                    row.Cells[0].Value = "Erro ao carregar";
+                    row.DefaultCellStyle.BackColor = Color.Red;
+                }
+                else
+                {
+                    row.Cells[0].Value = "Web Service OK";
+                    row.DefaultCellStyle.BackColor = Color.Green;
+                }
+                row.Cells[2].Value = erro;
+                DgvLista.Rows.Add(row);
+            }));
         }
 
         private void SalvarServidor(string servidor)
