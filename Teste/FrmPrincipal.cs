@@ -29,6 +29,7 @@ namespace TesteWebService
             {
                 Invoke((Action)(() =>
                               {
+                                  BtnTestar.Enabled = false;
                                   LblTeste.Text = "Testando URLs WebServices";
                                   DgvLista.Rows.Clear();
                                   cbxSelectedIndex = CbxOpcaoTeste.SelectedIndex;
@@ -137,6 +138,7 @@ namespace TesteWebService
         private void BwProcesso_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             LblTeste.Text = "Testes Concluidos!";
+            BtnTestar.Enabled = true;
         }
     }
 }
