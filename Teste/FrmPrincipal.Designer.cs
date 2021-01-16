@@ -100,7 +100,7 @@
             // 
             this.BtnTestar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.BtnTestar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTestar.Location = new System.Drawing.Point(555, 14);
+            this.BtnTestar.Location = new System.Drawing.Point(626, 14);
             this.BtnTestar.Name = "BtnTestar";
             this.BtnTestar.Size = new System.Drawing.Size(142, 42);
             this.BtnTestar.TabIndex = 5;
@@ -122,7 +122,7 @@
             this.Erro});
             this.DgvLista.Location = new System.Drawing.Point(13, 153);
             this.DgvLista.Name = "DgvLista";
-            this.DgvLista.Size = new System.Drawing.Size(684, 244);
+            this.DgvLista.Size = new System.Drawing.Size(755, 244);
             this.DgvLista.TabIndex = 6;
             // 
             // Check
@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 406);
+            this.ClientSize = new System.Drawing.Size(780, 406);
             this.Controls.Add(this.LblTeste);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.DgvLista);

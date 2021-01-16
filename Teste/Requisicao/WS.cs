@@ -13,7 +13,8 @@ namespace TesteWebService.Requisicao
 
             try
             {
-                webClient.DownloadString(url);
+                webClient.OpenRead(url);
+                //webClient.DownloadString(url);
 
                 return webClient.IsBusy;
             }
