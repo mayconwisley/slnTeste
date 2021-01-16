@@ -61,6 +61,7 @@
             this.TxtUrlServidorJavaEE.Name = "TxtUrlServidorJavaEE";
             this.TxtUrlServidorJavaEE.Size = new System.Drawing.Size(316, 20);
             this.TxtUrlServidorJavaEE.TabIndex = 1;
+            this.TxtUrlServidorJavaEE.Text = "http://localhost:8080";
             // 
             // label2
             // 
