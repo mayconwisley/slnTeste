@@ -14,8 +14,7 @@ namespace TesteWebService.Requisicao
             try
             {
                 webClient.OpenRead(url);
-                //webClient.DownloadString(url);
-
+               
                 return webClient.IsBusy;
             }
             catch (Exception ex)
