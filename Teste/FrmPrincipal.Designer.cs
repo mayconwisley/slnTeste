@@ -42,6 +42,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.BwProcesso = new System.ComponentModel.BackgroundWorker();
             this.LblTeste = new System.Windows.Forms.Label();
+            this.LnkSeniorDeployTool = new System.Windows.Forms.LinkLabel();
+            this.LnkPainelPadraoGlassfish = new System.Windows.Forms.LinkLabel();
+            this.LnkSolucaoBase = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).BeginInit();
             this.SuspendLayout();
@@ -163,17 +166,53 @@
             // 
             this.LblTeste.AutoSize = true;
             this.LblTeste.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTeste.Location = new System.Drawing.Point(338, 89);
+            this.LblTeste.Location = new System.Drawing.Point(338, 61);
             this.LblTeste.Name = "LblTeste";
             this.LblTeste.Size = new System.Drawing.Size(31, 29);
             this.LblTeste.TabIndex = 9;
             this.LblTeste.Text = "...";
+            // 
+            // LnkSeniorDeployTool
+            // 
+            this.LnkSeniorDeployTool.AutoSize = true;
+            this.LnkSeniorDeployTool.Location = new System.Drawing.Point(671, 137);
+            this.LnkSeniorDeployTool.Name = "LnkSeniorDeployTool";
+            this.LnkSeniorDeployTool.Size = new System.Drawing.Size(97, 13);
+            this.LnkSeniorDeployTool.TabIndex = 10;
+            this.LnkSeniorDeployTool.TabStop = true;
+            this.LnkSeniorDeployTool.Text = "Senior Deploy Tool";
+            this.LnkSeniorDeployTool.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkSeniorDeployTool_LinkClicked);
+            // 
+            // LnkPainelPadraoGlassfish
+            // 
+            this.LnkPainelPadraoGlassfish.AutoSize = true;
+            this.LnkPainelPadraoGlassfish.Location = new System.Drawing.Point(650, 119);
+            this.LnkPainelPadraoGlassfish.Name = "LnkPainelPadraoGlassfish";
+            this.LnkPainelPadraoGlassfish.Size = new System.Drawing.Size(118, 13);
+            this.LnkPainelPadraoGlassfish.TabIndex = 11;
+            this.LnkPainelPadraoGlassfish.TabStop = true;
+            this.LnkPainelPadraoGlassfish.Text = "Painel Padrão Glassfish";
+            this.LnkPainelPadraoGlassfish.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkPainelPadraoGlassfish_LinkClicked);
+            // 
+            // LnkSolucaoBase
+            // 
+            this.LnkSolucaoBase.AutoSize = true;
+            this.LnkSolucaoBase.Location = new System.Drawing.Point(656, 103);
+            this.LnkSolucaoBase.Name = "LnkSolucaoBase";
+            this.LnkSolucaoBase.Size = new System.Drawing.Size(112, 13);
+            this.LnkSolucaoBase.TabIndex = 12;
+            this.LnkSolucaoBase.TabStop = true;
+            this.LnkSolucaoBase.Text = "Solução Base - 16186";
+            this.LnkSolucaoBase.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkSolucaoBase_LinkClicked);
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 406);
+            this.Controls.Add(this.LnkSolucaoBase);
+            this.Controls.Add(this.LnkPainelPadraoGlassfish);
+            this.Controls.Add(this.LnkSeniorDeployTool);
             this.Controls.Add(this.LblTeste);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.DgvLista);
@@ -212,6 +251,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Erro;
         private System.ComponentModel.BackgroundWorker BwProcesso;
         private System.Windows.Forms.Label LblTeste;
+        private System.Windows.Forms.LinkLabel LnkSeniorDeployTool;
+        private System.Windows.Forms.LinkLabel LnkPainelPadraoGlassfish;
+        private System.Windows.Forms.LinkLabel LnkSolucaoBase;
     }
 }
 

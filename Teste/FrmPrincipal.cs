@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using TesteWebService.ListaWebServices;
 using TesteWebService.Requisicao;
+using System.Diagnostics;
 
 namespace TesteWebService
 {
@@ -23,7 +24,6 @@ namespace TesteWebService
             ws = new WS();
             integracao = new Integracao();
             int cbxSelectedIndex = 0;
-            strServidor = TxtUrlServidorJavaEE.Text.Trim();
             List<string> listaIntegracoes = null;
             try
             {
@@ -117,7 +117,8 @@ namespace TesteWebService
 
         private void BuscarServidor()
         {
-            TxtUrlServidorJavaEE.Text = Properties.Settings.Default.ServidorJavaEE;
+            strServidor = Properties.Settings.Default.ServidorJavaEE;
+            TxtUrlServidorJavaEE.Text = strServidor;
         }
         private void BtnTestar_Click(object sender, EventArgs e)
         {
@@ -139,6 +140,44 @@ namespace TesteWebService
         {
             LblTeste.Text = "Testes Concluidos!";
             BtnTestar.Enabled = true;
+        }
+
+        private void LnkSeniorDeployTool_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string seniorDeployTool = "SeniorDeployTool/";
+            Process.Start(TxtUrlServidorJavaEE.Text + seniorDeployTool);
+        }
+
+        private void LnkPainelPadraoGlassfish_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AcessarPadraoGlassfish();
+        }
+
+        private void AcessarPadraoGlassfish()
+        {
+            string novoStrServidor = string.Empty;
+            int count = 0;
+            foreach (char item in strServidor)
+            {
+                novoStrServidor += item;
+                if (item == ':')
+                {
+                    count++;
+
+                    if (count == 2)
+                    {
+                        novoStrServidor += "4848/";
+                        break;
+                    }
+                }
+            }
+            Process.Start(novoStrServidor);
+        }
+
+
+        private void LnkSolucaoBase_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://documentacao.senior.com.br/bancodesolucoes/index.htm#gestao-pessoas/16186.htm");
         }
     }
 }
