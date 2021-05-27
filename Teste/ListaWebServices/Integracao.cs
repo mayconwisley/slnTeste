@@ -57,5 +57,14 @@ namespace TesteWebService.ListaWebServices
             };
             return lstWebService;
         }
+
+        public List<string> RondaSenior(string servidor)
+        {
+            lstWebService = new List<string>
+            {
+                servidor + @"g5-senior-services/sp_Synccom_senior_g5_sp_utils?wsdl"
+            };
+            return lstWebService;
+        }
     }
 }

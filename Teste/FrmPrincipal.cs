@@ -23,6 +23,7 @@ namespace TesteWebService
         {
             ws = new WS();
             integracao = new Integracao();
+            strServidor = Properties.Settings.Default.ServidorJavaEE;
             int cbxSelectedIndex = 0;
             List<string> listaIntegracoes = null;
             try
@@ -60,6 +61,11 @@ namespace TesteWebService
                     case 4:
                         listaIntegracoes = new List<string>();
                         listaIntegracoes = integracao.CentroCusto(strServidor);
+
+                        break;
+                    case 5:
+                        listaIntegracoes = new List<string>();
+                        listaIntegracoes = integracao.RondaSenior(strServidor);
 
                         break;
                     default:

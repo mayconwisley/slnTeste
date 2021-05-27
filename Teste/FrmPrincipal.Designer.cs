@@ -82,7 +82,8 @@
             "02 - Integração Contabil",
             "03 - Integração Fornecedor",
             "04 - Integração Pesquisa",
-            "05 - Integração Centro de Custo"});
+            "05 - Integração Centro de Custo",
+            "06 - Ronda Senior"});
             this.CbxOpcaoTeste.Location = new System.Drawing.Point(6, 32);
             this.CbxOpcaoTeste.Name = "CbxOpcaoTeste";
             this.CbxOpcaoTeste.Size = new System.Drawing.Size(304, 21);
